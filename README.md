@@ -140,11 +140,15 @@ Durante esta etapa, el robot se desplaza por el entorno y genera el mapa mediant
 
 **Terminal 1:**
 ```bash
+cd ~/go2_ws
+colcon build
+source install/setup.bash
 ros2 launch go2_config gazebo.launch.py world:=bookstore
 ```
 
 **Terminal 2:**
 ```bash
+source install/setup.bash
 ros2 launch go2_config planner.launch.py
 ```
 
