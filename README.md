@@ -152,13 +152,9 @@ Desde RViz se envía el objetivo utilizando **2D Goal Pose**, generando automát
 
 ### Resultados – Parte B
 
-- Imagen del path generado:
-
-![Path Dijkstra](imagenes/path_dijkstra.png)
-
 - Video demostrativo:
 
-[Enlace al video de planificación en YouTube]
+[Enlace al video de planificación en YouTube]: https://youtu.be/paWg-mz8wEk
 
 ---
 
