@@ -3,7 +3,6 @@
 ## Descripción del proyecto
 Este proyecto implementa un sistema completo de **SLAM** y **planificación de trayectorias** para un robot cuadrúpedo **Unitree GO2** usando **ROS 2**, **Gazebo** y **RViz**. En una primera etapa, el robot realiza el mapeo de un entorno simulado (*bookstore world*) utilizando SLAM. Posteriormente, se desarrolla un nodo propio que genera un **camino (Path)** en RViz empleando el algoritmo de **Dijkstra**, permitiendo al robot planificar trayectorias hacia diferentes objetivos enviados desde la interfaz gráfica.
 
-El repositorio es **100 % reproducible**, de modo que el docente puede clonarlo y ejecutar el proyecto sin realizar modificaciones adicionales.
 
 ---
 
@@ -12,7 +11,7 @@ El repositorio es **100 % reproducible**, de modo que el docente puede clonarlo
 ### 1. SLAM
 Se utiliza un algoritmo de SLAM disponible en ROS 2 para la construcción del mapa del entorno a partir de sensores del robot (LIDAR). Este algoritmo permite:
 - Estimar la posición del robot en tiempo real.
-- Construir un mapa 2D del entorno (*occupancy grid*).
+- Construir un mapa 2D del entorno.
 - Guardar el mapa generado para su uso posterior en navegación.
 
 **Variables principales:**
