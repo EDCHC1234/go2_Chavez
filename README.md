@@ -128,11 +128,11 @@ Durante esta etapa, el robot se desplaza por el entorno y genera el mapa mediant
 
 - Imagen del mapa generado:
 
-![Mapa SLAM](https://github.com/EDCHC1234/go2_Chavez/blob/main/configs/go2_config/maps/mapM10.pgm)
+![Mapa SLAM](https://github.com/EDCHC1234/go2_Chavez/blob/main/Screenshot%20from%202026-01-08%2020-44-02.png)
 
 - Video demostrativo:
 
-[Enlace al video de SLAM en YouTube]
+[Enlace al video de SLAM en YouTube: https://youtu.be/KsxeEGZE-nQ]
 
 ---
 
