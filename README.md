@@ -117,10 +117,7 @@ go2_ws/
 
 ### Parte A – Mapeo (SLAM)
 
-**Terminal 1:**
-```bash
-ros2 launch go2_config gazebo.launch.py world:=bookstore
-```
+
 
 Durante esta etapa, el robot se desplaza por el entorno y genera el mapa mediante SLAM.
 
