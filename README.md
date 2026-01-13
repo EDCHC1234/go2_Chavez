@@ -8,23 +8,7 @@ Este proyecto implementa un sistema completo de **SLAM** y **planificación de t
 ###  Planificación de trayectorias – Dijkstra
 Se implementa un nodo propio de planificación que utiliza el algoritmo de **Dijkstra** para encontrar el camino más corto entre la posición actual del robot y un objetivo enviado desde RViz mediante *2D Goal Pose*.
 
-**Descripción del algoritmo:**
-- El mapa se representa como una grilla de celdas navegables.
-- Cada celda es un nodo del grafo.
-- El costo entre nodos adyacentes es uniforme.
-- Dijkstra calcula el camino de menor costo desde el nodo inicial hasta el nodo objetivo.
 
-**Variables principales:**
-- `start`: posición inicial del robot.
-- `goal`: posición objetivo seleccionada en RViz.
-- `grid_map`: representación discreta del mapa.
-- `path`: lista de puntos que conforman la trayectoria final.
-
-**Modificaciones realizadas:**
-- Adaptación del algoritmo para trabajar con mapas de ocupación de ROS 2.
-- Publicación del resultado como mensaje `nav_msgs/Path` para su visualización en RViz.
-
----
 
 ## 1. Installation
 
