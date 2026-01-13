@@ -1,7 +1,7 @@
 # Proyecto SLAM y Planificación de Trayectorias con GO2 (ROS 2)
 
 ## Descripción del proyecto
-Este proyecto implementa un sistema completo de **SLAM** y **planificación de trayectorias** para un robot cuadrúpedo **Unitree GO2** usando **ROS 2**, **Gazebo** y **RViz**. En una primera etapa, el robot realiza el mapeo de un entorno simulado (*bookstore world*) utilizando SLAM. Posteriormente, se desarrolla un nodo propio que genera un **camino (Path)** en RViz empleando el algoritmo de **Dijkstra**, permitiendo al robot planificar trayectorias hacia diferentes objetivos enviados desde la interfaz gráfica.
+Este proyecto implementa un sistema completo de **SLAM** y **planificación de trayectorias** para un robot cuadrúpedo **Unitree GO2** usando **ROS 2**, **Gazebo** y **RViz**. En una primera etapa, el robot realiza el mapeo de un entorno simulado (*small_house world*) utilizando SLAM. Posteriormente, se desarrolla un nodo propio que genera un **camino (Path)** en RViz empleando el algoritmo de **Dijkstra**, permitiendo al robot planificar trayectorias hacia diferentes objetivos enviados desde la interfaz gráfica.
 
 
 ---
