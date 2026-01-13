@@ -120,7 +120,7 @@ Durante esta etapa, el robot se desplaza por el entorno y genera el mapa mediant
 
 - Video demostrativo:
 
-[Enlace al video de SLAM en YouTube:] https://youtu.be/7YhXBLVjdAE
+[Enlace al video de SLAM en YouTube:]: https://youtu.be/VuV9zSHhyUM
 
 ---
 
@@ -162,21 +162,7 @@ Desde RViz se envía el objetivo utilizando **2D Goal Pose**, generando automát
   
 - Video demostrativo:
 
-[Enlace al video de planificación en YouTube]: https://youtu.be/paWg-mz8wEk
-
----
-
-## Video demostrativo (C2)
-
-Duración aproximada: 1–3 minutos.
-
-Contenido:
-- Robot en Gazebo realizando SLAM.
-- Visualización del mapa en RViz.
-- Envío de *2D Goal Pose*.
-- Generación y actualización del Path con nuevos objetivos.
-
-[Enlace al video completo en YouTube]
+[Enlace al video de planificación en YouTube]: https://youtu.be/gsP_PMtDc3U
 
 ---
 
