@@ -127,6 +127,18 @@ Durante esta etapa, el robot se desplaza por el entorno y genera el mapa mediant
 
 ---
 
+
+
+## 📊 Resultados Visuales
+
+
+| Mapa obtenido con slam |Mapa editado |
+| :--- | :--- |
+| ![Dijkstra](https://github.com/EDCHC1234/my_Respository/blob/main/planning.png) | ![Dijkstra](https://github.com/EDCHC1234/my_Respository/blob/main/Figure_1.png) |
+
+> **Nota:** El área gris representa el espacio de búsqueda expandido por el algoritmo antes de converger en la ruta óptima (línea verde).
+
+
 ### Parte B – Planificación de trayectorias
 
 **Terminal 1:**
