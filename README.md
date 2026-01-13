@@ -117,9 +117,6 @@ Durante esta etapa, el robot se desplaza por el entorno y genera el mapa mediant
 
 ### Resultados – Parte A
 
-- Imagen del mapa generado:
-
-![Mapa SLAM](https://github.com/EDCHC1234/go2_Chavez/blob/main/Screenshot%20from%202026-01-08%2020-44-02.png)
 
 - Video demostrativo:
 
@@ -134,9 +131,9 @@ Durante esta etapa, el robot se desplaza por el entorno y genera el mapa mediant
 
 | Mapa obtenido con slam |Mapa editado |
 | :--- | :--- |
-| ![Dijkstra](https://github.com/EDCHC1234/my_Respository/blob/main/planning.png) | ![Dijkstra](https://github.com/EDCHC1234/my_Respository/blob/main/Figure_1.png) |
+| ![Slam](https://github.com/EDCHC1234/go2_Chavez/blob/main/Screenshot%20from%202026-01-11%2021-39-08.png) | ![Mapa editado](https://github.com/EDCHC1234/go2_Chavez/blob/main/Screenshot%20from%202026-01-12%2021-47-45.png) |
 
-> **Nota:** El área gris representa el espacio de búsqueda expandido por el algoritmo antes de converger en la ruta óptima (línea verde).
+> **Nota:** Por limitaciones de recuso del equipo se loggro obtener un mapa donde se obtuvo el contorno del mundo small house y luego se edito la imagen para tener un mapa mas limpio.
 
 
 ### Parte B – Planificación de trayectorias
