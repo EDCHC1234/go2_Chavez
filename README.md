@@ -162,7 +162,7 @@ Desde RViz se envía el objetivo utilizando **2D Goal Pose**, generando automát
   
 - Video demostrativo:
 
-[Enlace al video de planificación en YouTube]: https://youtu.be/gsP_PMtDc3U
+[Enlace al video de planificación en YouTube] (https://youtu.be/gsP_PMtDc3U)
 
 ---
 
