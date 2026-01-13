@@ -4,24 +4,8 @@
 Este proyecto implementa un sistema completo de **SLAM** y **planificación de trayectorias** para un robot cuadrúpedo **Unitree GO2** usando **ROS 2**, **Gazebo** y **RViz**. En una primera etapa, el robot realiza el mapeo de un entorno simulado (*small_house world*) utilizando SLAM. Posteriormente, se desarrolla un nodo propio que genera un **camino (Path)** en RViz empleando el algoritmo de **Dijkstra**, permitiendo al robot planificar trayectorias hacia diferentes objetivos enviados desde la interfaz gráfica.
 
 
----
 
-## Algoritmos utilizados
-
-### 1. SLAM
-Se utiliza un algoritmo de SLAM disponible en ROS 2 para la construcción del mapa del entorno a partir de sensores del robot (LIDAR). Este algoritmo permite:
-- Estimar la posición del robot en tiempo real.
-- Construir un mapa 2D del entorno.
-- Guardar el mapa generado para su uso posterior en navegación.
-
-**Variables principales:**
-- `map`: mapa generado del entorno.
-- `odom`: información de odometría del robot.
-- `scan`: datos del sensor LIDAR.
-
----
-
-### 2. Planificación de trayectorias – Dijkstra
+###  Planificación de trayectorias – Dijkstra
 Se implementa un nodo propio de planificación que utiliza el algoritmo de **Dijkstra** para encontrar el camino más corto entre la posición actual del robot y un objetivo enviado desde RViz mediante *2D Goal Pose*.
 
 **Descripción del algoritmo:**
@@ -165,6 +149,47 @@ Desde RViz se envía el objetivo utilizando **2D Goal Pose**, generando automát
 [Enlace al video de planificación en YouTube] (https://youtu.be/gsP_PMtDc3U)
 
 ---
+
+### Explicación del código – Parte B
+
+#### planner_node.py (Nodo de planificación global con Dijkstra)
+
+El archivo `planner_node.py` implementa un **nodo ROS 2 personalizado** encargado de calcular una trayectoria global utilizando el algoritmo de **Dijkstra**, a partir de un mapa de ocupación generado previamente por SLAM.
+
+El nodo se suscribe a los siguientes tópicos:
+- `/map` (`nav_msgs/OccupancyGrid`): mapa 2D del entorno.
+- `/odom` (`nav_msgs/Odometry`): posición actual del robot.
+- `/goal_pose` (`geometry_msgs/PoseStamped`): objetivo enviado desde RViz mediante *2D Goal Pose*.
+
+Y publica:
+- `/zed/path_map` (`nav_msgs/Path`): trayectoria final calculada.
+
+Funcionamiento general del nodo:
+- El mapa de ocupación se convierte en una grilla de celdas navegables.
+- Las celdas ocupadas se inflan artificialmente para crear una **zona de seguridad** alrededor de los obstáculos.
+- La posición actual del robot y el objetivo se transforman de coordenadas del mundo a coordenadas de grilla.
+- Se aplica el algoritmo de **Dijkstra**, considerando movimientos en 8 direcciones (horizontal, vertical y diagonal).
+- El camino resultante se convierte nuevamente a coordenadas del mundo.
+- La trayectoria se publica en RViz como un mensaje `Path`.
+- Adicionalmente, los puntos del camino se guardan en un archivo CSV (`waypoints_generados.csv`) para análisis posterior.
+
+Este nodo permite recalcular dinámicamente el path cada vez que se envía un nuevo objetivo desde RViz.
+
+---
+
+#### planner.launch.py (Lanzamiento del sistema de planificación)
+
+El archivo `planner.launch.py` se encarga de lanzar todos los nodos necesarios para la **Parte B – Planificación de trayectorias**, integrando mapa, transformaciones, planner y visualización.
+
+Incluye los siguientes componentes:
+- **Map Server**: carga el mapa previamente generado en formato `.yaml`.
+- **Lifecycle Manager**: activa automáticamente el servidor de mapas.
+- **Static Transform Publisher**: publica la transformación estática entre los frames `map` y `odom`.
+- **Nodo planner (Dijkstra)**: ejecuta el archivo `planner_node.py`.
+- **RViz2**: permite visualizar el mapa, la posición del robot y la trayectoria generada.
+
+Este archivo asegura que todos los elementos necesarios estén sincronizados usando tiempo simulado (`use_sim_time`), permitiendo que el usuario envíe objetivos desde RViz y observe la generación del path en tiempo real.
+
 
 ## Autor
 
