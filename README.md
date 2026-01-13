@@ -120,7 +120,7 @@ Durante esta etapa, el robot se desplaza por el entorno y genera el mapa mediant
 
 - Video demostrativo:
 
-[Enlace al video de SLAM en YouTube:]: https://youtu.be/VuV9zSHhyUM
+[Enlace al video de SLAM en YouTube:]: (https://youtu.be/VuV9zSHhyUM)
 
 ---
 
