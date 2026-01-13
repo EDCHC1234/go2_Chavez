@@ -116,6 +116,7 @@ ros2 launch go2_config gazebo.launch.py world:=bookstore
 
 **Terminal 2:**
 ```bash
+cd ~/go2_ws
 source install/setup.bash
 ros2 launch go2_config planner.launch.py
 ```
