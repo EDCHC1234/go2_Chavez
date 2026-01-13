@@ -42,45 +42,39 @@ Se implementa un nodo propio de planificación que utiliza el algoritmo de **Dij
 
 ---
 
-## Dependencias
+## 1. Installation
 
-- Ubuntu 22.04
-- ROS 2 Humble
-- Gazebo
-- RViz2
-- Paquetes ROS 2 estándar:
-  - `nav_msgs`
-  - `geometry_msgs`
-  - `sensor_msgs`
-  - `rclpy`
-- Repositorio del robot GO2
-
----
-
-## Instalación y configuración
-
-### 1. Crear el workspace
-
+### 1.0 Install ROS-based dependencies:
 ```bash
-mkdir -p ~/go2_ws/src
-cd ~/go2_ws/src
+sudo apt install ros-humble-gazebo-ros2-control
+sudo apt install ros-humble-xacro
+sudo apt install ros-humble-robot-localization
+sudo apt install ros-humble-ros2-controllers
+sudo apt install ros-humble-ros2-control
+sudo apt install ros-humble-velodyne
+sudo apt install ros-humble-velodyne-gazebo-plugins
+sudo apt-get install ros-humble-velodyne-description
 ```
 
-### 2. Clonar el repositorio
-
+### 1.1 Clone and install all dependencies:
+    
 ```bash
+sudo apt install -y python3-rosdep
+rosdep update
+
+mkdir -p go2_ws/src
+cd go2_ws/src
 git clone https://github.com/EDCHC1234/go2_Chavez.git
+cd ~/go2_ws
+rosdep install --from-paths src --ignore-src -r -y
 ```
 
-### 3. Compilar el workspace
-
+### 1.2 Build your workspace:
 ```bash
 cd ~/go2_ws
 colcon build
-source install/setup.bash
-```
+. go2_ws/install/setup.bash
 
----
 
 ## Estructura del paquete ROS 2
 
