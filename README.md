@@ -157,7 +157,7 @@ Desde RViz se envía el objetivo utilizando **2D Goal Pose**, generando automát
 ### Resultados – Parte B
 - Ruta generada
 
-  ![Ruta](https://github.com/EDCHC1234/go2_Chavez/blob/main/Screenshot%20from%202026-01-08%2020-54-22.png)
+  ![Ruta](https://github.com/EDCHC1234/go2_Chavez/blob/main/Screenshot%20from%202026-01-12%2022-10-35.png)
 
   
 - Video demostrativo:
