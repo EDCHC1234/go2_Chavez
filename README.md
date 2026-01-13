@@ -74,7 +74,7 @@ rosdep install --from-paths src --ignore-src -r -y
 cd ~/go2_ws
 colcon build
 . go2_ws/install/setup.bash
-
+```
 
 ## Estructura del paquete ROS 2
 
